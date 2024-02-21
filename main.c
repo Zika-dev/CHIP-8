@@ -631,7 +631,7 @@ int main(int argc[], char* argv[])
 
 	if (SDL_OpenAudio(&audioSpec, NULL) < 0) {
 		printf("SDL could not open audio! SDL_Error: %s\n", SDL_GetError());
-		// Handle error
+		return 1;
 	}
 
 	SDL_PauseAudio(0);
